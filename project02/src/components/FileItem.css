@@ -1,0 +1,34 @@
+.btn-add-child {
+  margin-left: auto; /* Empuja el botón a la derecha */
+  background: #2563eb;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 6px;
+  display: none; /* Oculto por defecto */
+}
+
+.file-item:hover .btn-add-child {
+  display: block; /* Aparece al pasar el mouse */
+}
+
+.add-child-input {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0 5px 25px;
+}
+
+.add-child-input input {
+  padding: 2px 5px;
+  background-color: #2563eb;
+  font-size: 0.8rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 3px;
+}
+
+.add-child-input button {
+  background: rgb(12, 49, 173);
+  border: 1px solid #cbd5e0;
+  cursor: pointer;
+  border-radius: 3px;
+}
