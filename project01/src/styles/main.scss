@@ -1,0 +1,59 @@
+@use 'variables' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: v.$bg-black; // Accedemos con el alias 'v.'
+  color: v.$text-white;
+  font-family: v.$font-main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(180deg, #1c1c1c 0%, #040404 100%);
+  
+  header {
+    margin-bottom: 30px;
+    text-align: center;
+    
+    h1 {
+      font-size: 2.5rem;
+      color: v.$text-white;
+      span {
+        color: v.$spotify-green;
+      }
+    }
+    p {
+      color: v.$text-muted;
+      margin-top: 5px;
+    }
+  }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+.panel-section {
+  @include v.spotify-card;
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    color: v.$text-white;
+  }
+}

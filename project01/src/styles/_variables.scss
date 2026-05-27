@@ -1,0 +1,52 @@
+$bg-black: #040404;
+$bg-dark-grey: #121212;
+$bg-light-grey: #181818;
+$bg-card-hover: #282828;
+$spotify-green: #1db954;
+$spotify-green-hover: #1ed760;
+$text-white: #ffffff;
+$text-muted: #b3b3b3;
+
+$font-main: 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$border-radius-lg: 8px;
+$border-radius-sm: 4px;
+$transition-smooth: all 0.3s ease;
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin spotify-card {
+  background-color: $bg-light-grey;
+  border-radius: $border-radius-lg;
+  padding: 20px;
+  transition: $transition-smooth;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    background-color: $bg-card-hover;
+  }
+}
+
+@mixin custom-button {
+  background-color: $spotify-green;
+  color: $bg-black;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: $transition-smooth;
+
+  &:hover {
+    background-color: $spotify-green-hover;
+    transform: scale(1.03);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
